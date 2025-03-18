@@ -1,0 +1,24 @@
+$colors: (
+    
+    white-1: #FFFFFF,    
+    white-2: #DDDDDD,
+    white-3: #FEFEFE,
+
+    dark-1: #0F0715,
+    dark-2: #050709,
+    dark-3: #140C1C,
+
+    blue-1: #3F51B5,
+    gray-1: #424242, 
+
+    red: #F10A80,
+);
+
+@function color($color-name){
+    @return map-get($colors, $color-name);
+}
+
+$screen-desktop-xl: 1200px;
+$screen-desktop-lg: 1024px;
+$screen-desktop-md: 750px;
+$screen-desktop-sm: 600px;

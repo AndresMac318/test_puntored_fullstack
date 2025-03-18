@@ -1,0 +1,51 @@
+services:
+  postgres-sql:
+    container_name: postgres_db
+    image: postgres:16.6
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_vol:/var/lib/postgresql/data
+      #- ./data/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - puntored-network
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+
+  springboot-app:
+    depends_on:
+      - postgres-sql
+    build: ./apirest
+    container_name: springboot_app
+    ports:
+      - "8080:8080"
+    networks:
+      - puntored-network
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:${SPRING_DATASOURCE_URL}
+      - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME}
+      - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+      - JWT_SECRET=${JWT_SECRET}
+      - APIKEY-PUNTORED=${APIKEY-PUNTORED}
+      - URL-BASE-PUNTORED=${URL-BASE-PUNTORED}
+      - USER-PUNTORED=${USER-PUNTORED}
+      - PASSWORD-PUNTORED=${PASSWORD-PUNTORED}
+
+  puntoredapp:
+    depends_on: 
+      - springboot-app
+    build: ./puntored_web
+    container_name: puntored-container
+    ports:
+      - "4200:4200"
+    networks:
+    - puntored-network
+    command: npm run start -- --host 0.0.0.0
+
+
+networks:
+  puntored-network: { }
+volumes:
+  postgres_vol: {}
+  pgadmin_vol: {}

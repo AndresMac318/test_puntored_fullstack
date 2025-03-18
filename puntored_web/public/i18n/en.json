@@ -1,0 +1,75 @@
+{
+    "SIDENAV": {
+        "ITEM1": "Recharges",
+        "ITEM2": "Buy",
+        "ITEM3": "History",
+        "ITEM4": "Services",
+        "ITEM5": "Pines"
+    },
+    "AUTH": {
+        "LOGIN": {
+            "title": "Iniciar Sesión",
+            "FORM": {
+                "labels": {
+                    "email": "Email",
+                    "password": "Password" 
+                },
+                "text_btn": "Sign In",
+                "text_not_account": "You don't have account? Log In"
+            }
+        },
+        "REGISTER": {
+            "title": "Register",
+            "FORM": {
+                "labels": {
+                    "name": "Name",
+                    "lastname": "Last name",
+                    "email": "Email",
+                    "password": "Password"
+                },
+                "text_btn": "Log In",
+                "text_have_account": "Do you have an account yet? Sign In"
+            }
+        },
+        "errors": {
+            "name": "Name is mandatory",
+            "lastname": "Last name is mandatory",
+            "email": "Email is mandatory",
+            "email_invalid": "Email invalid",
+            "password": "Password is mandatory"
+        }
+    },
+    "RECHARGES": {
+        "LIST_ALL": {
+            "title": "Recharges made",
+            "TABLE": {
+                "columns": {
+                    
+                }
+            }
+        },
+        "BUY": {
+            "title": "Buy recharge",
+            "FORM": {
+                "labels": {
+                    "cellphone": "Name",
+                    "supplier": "Last name",
+                    "value": "Email"
+                },
+                "text_btn": "Buy"
+            },
+            "errors": {
+                "cellPhone": "Number is mandatory",
+                "cellphone_valid": "Number must be begin with 3 and have 10 numbers",
+                "supplier": "Supplier is mandatory",
+                "value": "Value is mandatory",
+                "value_min_max": "Value must be between 1.000 and 100.000"
+            }
+        }
+
+    },
+    "NOT_FOUND_COMPONENT": {
+        "page": "Page not found",
+        "to_home": "Back to home"
+    }
+}

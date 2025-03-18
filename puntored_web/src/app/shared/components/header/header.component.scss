@@ -1,0 +1,15 @@
+:host {
+    display: block;
+    .mat-toolbar {
+      background: #fff; // white-1
+      color: #fc0a8b;
+      border: 1px solid #00000029;
+    }
+    mat-icon {
+      color: #fc0a8b;
+    }
+}
+  
+.example-spacer {
+    flex: 1 1 auto;
+}

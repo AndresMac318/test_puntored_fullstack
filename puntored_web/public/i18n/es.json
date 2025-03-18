@@ -1,0 +1,75 @@
+{
+    "SIDENAV": {
+        "ITEM1": "Recargas",
+        "ITEM2": "Comprar",
+        "ITEM3": "Historial",
+        "ITEM4": "Servicios",
+        "ITEM5": "Pines"
+    },
+    "AUTH": {
+        "LOGIN": {
+            "title": "Iniciar Sesión",
+            "FORM": {
+                "labels": {
+                    "email": "Correo electrónico",
+                    "password": "Contraseña" 
+                },                
+                "text_btn": "Ingresar",
+                "text_not_account": "¿No tienes cuenta? Regístrate"
+            }
+        },
+        "REGISTER": {
+            "title": "Registro",
+            "FORM": {
+                "labels": {
+                    "name": "Nombre",
+                    "lastname": "Apellido",
+                    "email": "Correo electrónico",
+                    "password": "Contraseña" 
+                },
+                "text_btn": "Registrarse",
+                "text_have_account": "¿Ya tienes cuenta? Inicia sesión"
+            }
+        },
+        "errors": {
+            "name": "El nombre es obligatorio",
+            "lastname": "El Apellido es obligatorio",
+            "email": "El correo electrónico es obligatorio",
+            "email_invalid": "El correo electrónico es invalido",
+            "password": "La contraseña es obligatoria"
+        }
+    },
+    "RECHARGES": {
+        "LIST_ALL": {
+            "title": "Recargas realizadas",
+            "TABLE": {
+                "columns": {
+
+                }
+            }
+        },
+        "BUY": {
+            "title": "Comprar recarga",
+            "FORM": {
+                "labels": {
+                    "supplier": "Operador",
+                    "cellphone": "Número de celular",
+                    "value": "Valor"
+                },
+                "text_btn": "Comprar"
+            },
+            "errors": {
+                "cellPhone": "El número es requerido",
+                "cellphone_valid": "El número debe comenzar con 3 y tener 10 números",
+                "supplier": "El proveedor es requerido",
+                "value": "El valor es requerido",
+                "value_min_max": "El valor debe estar entre 1.000 y 100.000"
+            }
+        }
+
+    },
+    "NOT_FOUND_COMPONENT": {
+        "page": "Página no encontrada",
+        "to_home": "Volver al inicio"
+    }
+}

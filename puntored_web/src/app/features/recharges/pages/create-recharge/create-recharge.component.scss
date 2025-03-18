@@ -1,0 +1,44 @@
+@use '../../../../../../public/styles/mixins' as mixins;
+@use '../../../../../../public//styles//variables' as variables;
+
+.recharge {
+
+    width: 100%;
+    padding: 30px;
+
+    &__title {
+        font-weight: 400;
+        margin: 0 0 20px 0;
+    }
+
+    &__form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        
+    }
+
+    &__fieldcontainer{
+        display: flex;
+        flex-flow: column;
+    }
+
+    &__matfield {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+}
+
+@include mixins.desktop(){
+    .recharge {
+        &__fieldcontainer{
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+        }
+        &__matfield {
+            width: 30%;
+            margin: 0 0 10px 0;
+        }
+    }
+}
